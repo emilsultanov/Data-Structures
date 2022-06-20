@@ -9,6 +9,16 @@ class LinkedList {
 	constructor(head = null) {
 		this.head = head;
 	}
+	size() {
+		let size = 0;
+		let node = this.head;
+
+		while (node) {
+			size++;
+			node = node.next;
+		}
+		return size;
+	}
 }
 
 let linkedListNode1 = new LinkedListNode(3);
