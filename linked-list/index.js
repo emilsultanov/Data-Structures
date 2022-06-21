@@ -36,10 +36,39 @@ let SinglyLinkedList1 = new SinglyLinkedList(singlyLinkedListNode1);
 
 /**
  *
+ * Circular-Linked-List
+ *
+ */
+class CircularLinkedListNode {
+	constructor(data) {
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class CircularLinkedList {
+	constructor(head = null) {
+		this.head = head;
+	}
+}
+
+let circularLinkedListNode1 = new CircularLinkedListNode(1);
+let circularLinkedListNode2 = new CircularLinkedListNode(8);
+let circularLinkedListNode3 = new CircularLinkedListNode(2);
+let circularLinkedListNode4 = new CircularLinkedListNode(6);
+
+circularLinkedListNode1.next = circularLinkedListNode2;
+circularLinkedListNode2.next = circularLinkedListNode3;
+circularLinkedListNode3.next = circularLinkedListNode4;
+circularLinkedListNode4.next = circularLinkedListNode1;
+
+let circularLinkedList1 = new CircularLinkedList(circularLinkedListNode1);
+
+/**
+ *
  * Doubly-Linked-List
  *
  */
-
 class DoublyLinkedListNode {
 	constructor(data) {
 		this.data = data;
