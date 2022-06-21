@@ -99,3 +99,44 @@ doublyLinkedListNode3.next = doublyLinkedListNode4;
 doublyLinkedListNode4.prev = doublyLinkedListNode3;
 
 let doublyLinkedList1 = new DoublyLinkedList(doublyLinkedListNode1);
+
+/**
+ *
+ * Doubly-Circular-Linked-List
+ *
+ */
+
+class DoublyCircularLinkedListNode {
+	constructor(data) {
+		this.data = data;
+		this.prev = null;
+		this.next = null;
+	}
+}
+
+class DoublyCircularLinkedList {
+	constructor(head = null) {
+		this.head = head;
+	}
+}
+
+let doublyCircularLinkedListNode1 = new DoublyCircularLinkedListNode(2);
+let doublyCircularLinkedListNode2 = new DoublyCircularLinkedListNode(4);
+let doublyCircularLinkedListNode3 = new DoublyCircularLinkedListNode(6);
+let doublyCircularLinkedListNode4 = new DoublyCircularLinkedListNode(8);
+
+doublyCircularLinkedListNode1.prev = doublyCircularLinkedListNode4;
+doublyCircularLinkedListNode1.next = doublyCircularLinkedListNode2;
+
+doublyCircularLinkedListNode2.prev = doublyCircularLinkedListNode1;
+doublyCircularLinkedListNode2.next = doublyCircularLinkedListNode3;
+
+doublyCircularLinkedListNode3.prev = doublyCircularLinkedListNode2;
+doublyCircularLinkedListNode3.next = doublyCircularLinkedListNode4;
+
+doublyCircularLinkedListNode4.prev = doublyCircularLinkedListNode3;
+doublyCircularLinkedListNode4.prev = doublyCircularLinkedListNode1;
+
+let doublyCircularLinkedList1 = new DoublyCircularLinkedList(
+	doublyCircularLinkedListNode1
+);
