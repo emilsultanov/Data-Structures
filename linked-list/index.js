@@ -1,15 +1,16 @@
-class LinkedListNode {
-	constructor(data) {
-		this.data = data;
-		this.next = null;
-	}
+class SinglyLinkedListNode{
+  constructor(data){
+    this.data = data;
+    this.next = null
+  }
 }
 
-class LinkedList {
-	constructor(head = null) {
-		this.head = head;
-	}
-	size() {
+class SinglyLinkedList{
+  constructor(head = null){
+    this.head = head;
+  }
+
+  	size() {
 		let size = 0;
 		let node = this.head;
 
@@ -21,9 +22,9 @@ class LinkedList {
 	}
 }
 
-let linkedListNode1 = new LinkedListNode(3);
-let linkedListNode2 = new LinkedListNode(6);
+let singlyLinkedListNode1 = new SinglyLinkedListNode(3);
+let singlyLinkedListNode2 = new SinglyLinkedListNode(6);
 
-linkedListNode1.next = linkedListNode2;
+singlyLinkedListNode1.next = singlyLinkedListNode2;
 
-let linkedList1 = new LinkedList(linkedListNode1);
+let SinglyLinkedList1 = new SinglyLinkedList(singlyLinkedListNode1);
