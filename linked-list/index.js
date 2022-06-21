@@ -11,9 +11,13 @@ class SinglyLinkedListNode {
 }
 
 class SinglyLinkedList {
-	constructor(head = null) {
-		this.head = head;
+	constructor(data) {
+		this.head = SinglyLinkedList.createNode(data);
 	}
+
+  static createNode(data){
+    return new SinglyLinkedListNode(data);
+  }
 
 	size() {
 		let size = 0;
@@ -27,12 +31,8 @@ class SinglyLinkedList {
 	}
 }
 
-let singlyLinkedListNode1 = new SinglyLinkedListNode(3);
-let singlyLinkedListNode2 = new SinglyLinkedListNode(6);
-
-singlyLinkedListNode1.next = singlyLinkedListNode2;
-
-let SinglyLinkedList1 = new SinglyLinkedList(singlyLinkedListNode1);
+let singlyLinkedList = new SinglyLinkedList(1);
+singlyLinkedList.head.next = SinglyLinkedList.createNode(3)
 
 /**
  *
